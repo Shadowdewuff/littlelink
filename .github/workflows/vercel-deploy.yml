@@ -27,7 +27,7 @@ jobs:
   deploy:
     # Pull requests from forks get no secrets, so they have nothing to deploy with.
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404
     permissions:
       contents: read
       pull-requests: write
